@@ -1,1 +1,3 @@
-# google-docs-clone
+# google_docs
+
+A new Flutter project.
