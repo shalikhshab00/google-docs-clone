@@ -18,6 +18,7 @@ dependencies:
   json_annotation: ^4.8.1
   json_serializable: ^6.7.1
   shared_preferences: ^2.2.2
+  socket_io_client: ^2.0.3+1
   stacked: ^3.4.0
   stacked_services: ^1.1.0
 

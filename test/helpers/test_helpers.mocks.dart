@@ -9,6 +9,7 @@ import 'dart:ui' as _i9;
 import 'package:flutter/material.dart' as _i7;
 import 'package:google_docs/models/error_model.dart' as _i4;
 import 'package:google_docs/services/document_service.dart' as _i10;
+import 'package:google_docs/services/socket_service.dart' as _i11;
 import 'package:http/http.dart' as _i2;
 import 'package:logger/src/logger.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
@@ -830,3 +831,8 @@ class MockDocumentService extends _i1.Mock implements _i10.DocumentService {
         )),
       ) as _i8.Future<_i4.ErrorModel>);
 }
+
+/// A class which mocks [SocketService].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSocketService extends _i1.Mock implements _i11.SocketService {}

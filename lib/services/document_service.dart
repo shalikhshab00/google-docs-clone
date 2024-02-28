@@ -83,7 +83,7 @@ class DocumentService {
         ErrorModel(error: 'Some unexpected error occured.', data: null);
     try {
       var res = await client.get(
-        Uri.parse('$host/docs/$id'),
+        Uri.parse('$host/doc/$id'),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
           'x-auth-token': token,

@@ -13,6 +13,7 @@ import 'package:stacked_shared/stacked_shared.dart';
 
 import '../services/document_service.dart';
 import '../services/google_service.dart';
+import '../services/socket_service.dart';
 
 final locator = StackedLocator.instance;
 
@@ -30,4 +31,5 @@ Future<void> setupLocator({
   locator.registerLazySingleton(() => NavigationService());
   locator.registerLazySingleton(() => GoogleService());
   locator.registerLazySingleton(() => DocumentService());
+  locator.registerLazySingleton(() => SocketService());
 }

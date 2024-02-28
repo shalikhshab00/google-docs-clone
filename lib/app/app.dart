@@ -7,6 +7,7 @@ import 'package:google_docs/services/google_service.dart';
 import 'package:google_docs/ui/views/homescreen/homescreen_view.dart';
 import 'package:google_docs/ui/views/documentscreen/documentscreen_view.dart';
 import 'package:google_docs/services/document_service.dart';
+import 'package:google_docs/services/socket_service.dart';
 // @stacked-import
 
 @StackedApp(
@@ -23,6 +24,7 @@ import 'package:google_docs/services/document_service.dart';
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: GoogleService),
     LazySingleton(classType: DocumentService),
+    LazySingleton(classType: SocketService),
 // @stacked-service
   ],
   bottomsheets: [

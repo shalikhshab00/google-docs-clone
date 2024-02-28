@@ -6,12 +6,14 @@ class DocumentModel {
   final List content;
   final DateTime createdAt;
   final String id;
+  final int version;
   DocumentModel({
     required this.title,
     required this.uid,
     required this.content,
     required this.createdAt,
     required this.id,
+    required this.version,
   });
 
   Map<String, dynamic> toMap() {
@@ -21,6 +23,7 @@ class DocumentModel {
       'content': content,
       'createdAt': createdAt.millisecondsSinceEpoch,
       'id': id,
+      'version': version
     };
   }
 
@@ -31,6 +34,7 @@ class DocumentModel {
       content: List.from(map['content']),
       createdAt: DateTime.fromMillisecondsSinceEpoch(map['createdAt']),
       id: map['_id'] ?? '',
+      version: map['__v'] ?? '',
     );
   }
 

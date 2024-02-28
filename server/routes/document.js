@@ -22,6 +22,7 @@ documentRouter.post('/doc/create', auth, async (req, res) => {
 documentRouter.get('/docs/me', auth, async (req, res) => {
     try {
         let document = await Document.find({uid: req.user});
+        console.log(JSON.stringify(document));
         res.json(document);
     }catch(e) {
         res.status(500).json({error: e.message});
@@ -40,7 +41,7 @@ documentRouter.post('/doc/title', auth, async (req, res) => {
 
 documentRouter.get('/doc/:id', auth, async (req, res) => {
     try {
-        let document = await Document.find(req.params.id);
+        let document = await Document.findById(req.params.id);
         res.json(document);
     }catch(e) {
         res.status(500).json({error: e.message});
